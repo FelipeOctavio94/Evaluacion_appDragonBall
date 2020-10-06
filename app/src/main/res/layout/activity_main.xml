@@ -46,5 +46,6 @@
         android:layout_gravity="center"
         android:text="@string/btn_creators"
         android:layout_marginTop="20dp"
+        android:onClick="Creator"
         />
 </LinearLayout>
