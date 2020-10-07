@@ -1,10 +1,12 @@
 package cl.carreno.evaluacion_appdragonball.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import cl.carreno.evaluacion_appdragonball.DetailActivity;
 import cl.carreno.evaluacion_appdragonball.MainActivity;
 import cl.carreno.evaluacion_appdragonball.model.Character;
 
@@ -48,8 +51,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CharacterHolder> {
     public void onBindViewHolder(@NonNull CharacterHolder holder, int position) {
         Character character = characterList.get(position);
 
-        holder.name.setText(character.getName());
-        Glide.with(activity).load(character.image).into(holder.img);
+        holder.item_name.setText(character.name);
+        Glide.with(activity).load(character.image).into(holder.item_img);
+
+
+        holder.gender=character.gender;
+        holder.originPlanet=character.originPlanet;
+        holder.species=character.species;
+        holder.uimage=character.image;
     }
 
     @Override
@@ -59,13 +68,36 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CharacterHolder> {
 
     public class CharacterHolder extends RecyclerView.ViewHolder{
 
-            ImageView img;
-            TextView name;
+            public ImageView item_img;
+            public TextView item_name;
+            public String gender, originPlanet, species, uimage;
+            public RelativeLayout item_panel;
 
         public CharacterHolder(@NonNull View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.img);
-            name = itemView.findViewById(R.id.name);
+            item_img = itemView.findViewById(R.id.item_img);
+            item_name = itemView.findViewById(R.id.item_name);
+
+            item_panel = itemView.findViewById(R.id.item_panel);
+
+            item_panel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(activity, DetailActivity.class);
+
+                    intent.putExtra("NAME",item_name.getText().toString());
+                    intent.putExtra("GENDER",gender);
+                    intent.putExtra("ORIGINPLANET",originPlanet);
+                    intent.putExtra("SPECIES",species);
+                    intent.putExtra("IMAGE",uimage);
+
+                    activity.startActivity(intent);
+                }
+            });
+
+
+
+
         }
     }
 
