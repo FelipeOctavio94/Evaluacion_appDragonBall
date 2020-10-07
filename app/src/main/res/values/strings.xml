@@ -4,4 +4,9 @@
     <string name="txt_pass">Enter your password</string>
     <string name="btn_login">Login</string>
     <string name="btn_creators">Creators</string>
+    <string name="text_bulma">Bulma</string>
+    <string name="todo">TODO</string>
+    <string name="creators_text">Creators</string>
+    <string name="cristobal_canales">Cristobal Canales</string>
+    <string name="felipe_carre_o">Felipe Carreño</string>
 </resources>
