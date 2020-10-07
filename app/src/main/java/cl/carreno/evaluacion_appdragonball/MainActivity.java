@@ -28,7 +28,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String URL="https://dragon-ball-api.herokuapp.com/api/character";
+    private static final String URL="https://dragon-ball-api.herokuapp.com/api/character/";
 
 
     @Override
@@ -60,13 +60,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void processCharacter(String data) {
         try {
-            JSONObject root = new JSONObject(data);
+            JSONArray root = new JSONArray(data);
 
 
             List<Character> list = new ArrayList<>();
 
             for (int i = 0; i < root.length(); i++){
-                JSONObject character1 = root.getJSONObject(String.valueOf(i));
+                JSONObject character1 = root.getJSONObject(i);
 
                 String species = character1.getString("species");
                 String originPlanet = character1.getString("originPlanet");
@@ -77,7 +77,12 @@ public class MainActivity extends AppCompatActivity {
                 Character character = new Character(name, gender, originPlanet, species, image);
                 list.add(character);
             }
-
+            RecyclerView rc = findViewById(R.id.rc_character);
+            Adapter ad= new Adapter(this,list,R.layout.item_character);
+            LinearLayoutManager lm = new LinearLayoutManager(this);
+            lm.setOrientation(RecyclerView.VERTICAL);
+            rc.setLayoutManager(lm);
+            rc.setAdapter(ad);
 
 
 
