@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".InitialActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="ContentDescription"
-        android:src="@drawable/all"
-        android:scaleType="center"/>
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription" />
 
 </RelativeLayout>
