@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:id="@+id/description"
+    >
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Nombre:"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/saiyansans"
+        android:paddingEnd="10dp"
+        />
+
+    <TextView
+        android:id="@+id/genero"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Gender:"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/saiyansans"
+        android:paddingEnd="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/planeta"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Planeta:"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/saiyansans"
+
+
+        />
+
+
+</LinearLayout>

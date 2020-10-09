@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
@@ -17,19 +18,24 @@
     <RelativeLayout
         android:id="@+id/box"
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="wrap_content"
         android:padding="50dp"
         android:background="#cd8800"
         android:layout_alignParentBottom="true"
         >
+
+        <include android:id="@+id/desc" layout="@layout/description"/>
 
         <TextView
             android:id="@+id/name_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gohanTextt"
-            android:textSize="20sp"
-            android:paddingEnd="10dp"
+            android:textSize="30sp"
+            android:paddingEnd="20dp"
+            android:layout_below="@id/desc"
+            android:fontFamily="@font/saiyansans"
+            android:textColor="#ffffff"
 
             />
 
@@ -38,9 +44,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/masculinoTextt"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:layout_toEndOf="@id/name_detail"
             android:paddingEnd="10dp"
+            android:layout_below="@id/desc"
+            android:fontFamily="@font/saiyansans"
+            android:textColor="#ffffff"
             />
 
         <TextView
@@ -48,9 +57,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tierraTextt"
-            android:textSize="20dp"
+            android:textSize="30sp"
             android:layout_toRightOf="@id/gender_detail"
             android:paddingEnd="10dp"
+            android:layout_below="@id/desc"
+            android:fontFamily="@font/saiyansans"
+            android:textColor="#ffffff"
             />
 
         <TextView
@@ -58,8 +70,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/humanoTextt"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:layout_toEndOf="@id/planet_detail"
+            android:layout_below="@id/desc"
+            android:fontFamily="@font/saiyansans"
+            android:textColor="#ffffff"
             />
 
 
