@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void Login(View view) {
         if (txt.getText().toString().isEmpty()){
-            Toast.makeText(this,"Please complete parameter",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Please complete parameters",Toast.LENGTH_LONG).show();
         }else {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

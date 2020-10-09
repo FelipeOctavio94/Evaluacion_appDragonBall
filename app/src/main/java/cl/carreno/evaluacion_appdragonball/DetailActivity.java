@@ -32,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
         c_img= findViewById(R.id.img_gohan);
 
         c_name.setText(name);
-        c_gender.setText(species);
+        c_gender.setText(gender);
         c_originPlanet.setText(originPlanet);
         c_species.setText(species);
         Glide.with(this).load(image).into(c_img);

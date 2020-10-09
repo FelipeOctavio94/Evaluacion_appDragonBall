@@ -67,11 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
             for (int i = 0; i < root.length(); i++){
                 JSONObject character1 = root.getJSONObject(i);
-
-                String species = character1.getString("species");
-                String originPlanet = character1.getString("originPlanet");
-                String gender = character1.getString("gender");
                 String name = character1.getString("name");
+                String gender = character1.getString("gender");
+                String originPlanet = character1.getString("originPlanet");
+                String species = character1.getString("species");
                 String image = character1.getString("image");
 
                 Character character = new Character(name, gender, originPlanet, species, image);

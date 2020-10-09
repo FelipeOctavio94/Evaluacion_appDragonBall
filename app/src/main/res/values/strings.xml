@@ -9,4 +9,8 @@
     <string name="creators_text">Creators</string>
     <string name="cristobal_canales">Cristobal Canales</string>
     <string name="felipe_carre_o">Felipe Carreño</string>
+    <string name="gohanTextt">Gohan</string>
+    <string name="masculinoTextt">Masculino</string>
+    <string name="tierraTextt">Tierra</string>
+    <string name="humanoTextt">Humano</string>
 </resources>

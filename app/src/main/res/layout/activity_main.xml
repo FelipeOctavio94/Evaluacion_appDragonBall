@@ -6,22 +6,26 @@
     android:background="#cd8800"
     tools:context=".MainActivity"
     >
-
-
-
-    <TextView
-        android:id="@+id/text_name"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
+        android:layout_height="120dp"
+        android:src="@drawable/logoo"
+        android:layout_marginBottom="15dp"
         />
+
+
+
 
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/rc_character"
+        android:layout_below="@id/logo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="60dp" />
+
+         />
 
 
 </RelativeLayout>

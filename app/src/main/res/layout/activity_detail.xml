@@ -17,9 +17,9 @@
     <RelativeLayout
         android:id="@+id/box"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="125dp"
         android:padding="50dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#cd8800"
         android:layout_alignParentBottom="true"
         >
 
@@ -27,9 +27,9 @@
             android:id="@+id/name_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gohan"
-            android:paddingBottom="50sp"
-            android:textSize="20dp"
+            android:text="@string/gohanTextt"
+            android:textSize="20sp"
+            android:paddingEnd="10dp"
 
             />
 
@@ -37,28 +37,29 @@
             android:id="@+id/gender_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masculino"
-            android:textSize="20dp"
-            android:layout_toRightOf="@id/name_detail"
-
+            android:text="@string/masculinoTextt"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/name_detail"
+            android:paddingEnd="10dp"
             />
 
         <TextView
             android:id="@+id/planet_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tierra"
+            android:text="@string/tierraTextt"
             android:textSize="20dp"
             android:layout_toRightOf="@id/gender_detail"
+            android:paddingEnd="10dp"
             />
 
         <TextView
             android:id="@+id/species_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Humano"
-            android:textSize="20dp"
-            android:layout_toRightOf="@id/planet_detail"
+            android:text="@string/humanoTextt"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/planet_detail"
             />
 
 

@@ -4,15 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#cd8800"
     tools:context=".InitialActivity">
 
     <ImageView
+        android:id="@+id/chen"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="350dp"
+        android:paddingTop="80dp"
         android:paddingLeft="20sp"
         android:paddingRight="20sp"
-        android:src="@drawable/logo"
+        android:src="@drawable/chen"
         tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:src="@drawable/logoo"
+        tools:ignore="ContentDescription"
+        android:layout_below="@id/chen"/>
+
+
+
 
 </RelativeLayout>
